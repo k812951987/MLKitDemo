@@ -3,11 +3,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -32,7 +32,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'com.google.mlkit:barcode-scanning:16.1.1'
+    implementation project(':sdk')
+    implementation 'com.google.mlkit:barcode-scanning:17.0.2'
+    implementation 'com.google.mlkit:text-recognition-chinese:16.0.0-beta4'
     // CameraX core library using the camera2 implementation
     def camerax_version = "1.0.0-rc03"
     // The following line is optional, as the core library is included indirectly by camera-camera2
